@@ -1,5 +1,5 @@
 <div>
-  <nav x-data="{ isOpen: false }" class="bg-gray-800">
+  <nav x-data="{ isOpen: false }" class="bg-gray-800 fixed top-0 w-full">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
