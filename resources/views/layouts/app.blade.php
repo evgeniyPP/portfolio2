@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Евгений Петрянкин | Портфолио</title>
     <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/app.js" defer></script>
 </head>
 <body>
     @yield('content')
