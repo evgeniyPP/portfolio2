@@ -1,4 +1,4 @@
-<div>
+<div class="x-main">
   <x-navbar />
   <section class="text-gray-700 body-font mt-16">
     <div class="hidden sm:block sm:flex sm:w-full sm:justify-end sm:px-6">

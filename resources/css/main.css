@@ -11,3 +11,9 @@ body {
   background-size: 50px 50px;
   overflow-x: hidden;
 }
+
+@media (min-width: 640px) {
+  .x-main {
+    min-height: calc(100vh - 4rem);
+  }
+}
