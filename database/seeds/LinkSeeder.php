@@ -47,7 +47,7 @@ class LinkSeeder extends Seeder
         App\Link::create([
             'name' => 'LinkedIn',
             'description' => 'Пока я не очень активен на LinkedIn. Но стараюсь это исправить.',
-            'link' => 'https://github.com/evgeniyPP',
+            'link' => 'https://www.linkedin.com/in/evgeniypp',
             'logo' => 'fab fa-linkedin'
         ]);
     }
