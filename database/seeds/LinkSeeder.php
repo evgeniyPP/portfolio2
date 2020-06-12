@@ -41,7 +41,7 @@ class LinkSeeder extends Seeder
         ]);
 
         Link::create([
-            'name' => 'PluralSight',
+            'name' => 'Pluralsight',
             'description' => 'Здесь я учился и проходил тесты на знание технологий (Skill IQs). Подробнее в профиле.',
             'link' => 'https://app.pluralsight.com/profile/eugene-romanov',
             'logo' => 'fas fa-eye'

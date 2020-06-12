@@ -10,7 +10,7 @@
             <div class="inline-flex justify-between w-full">
               <span class="font-medium title-font">{{ $skill->name }}</span>
               @if($skill->rank)
-                <span class="title-font {{ $skill->rank_style }}" title="На основе PluralSight Skill IQs">{{ $skill->rank }}/300</span>
+                <span class="title-font {{ $skill->rank_style }}" title="На основе Pluralsight Skill IQs">{{ $skill->rank }}/300</span>
               @endif
             </div>
           </div>
@@ -27,7 +27,7 @@
             <div class="inline-flex justify-between w-full">
               <span class="font-medium title-font">{{ $skill->name }}</span>
               @if($skill->rank)
-                <span class="title-font {{ $skill->rank_style }}" title="На основе PluralSight Skill IQs">{{ $skill->rank }}/300</span>
+                <span class="title-font {{ $skill->rank_style }}" title="На основе Pluralsight Skill IQs">{{ $skill->rank }}/300</span>
               @endif
             </div>
           </div>

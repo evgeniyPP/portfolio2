@@ -135,5 +135,77 @@ class SkillSeeder extends Seeder
             'type' => 'side',
             'logo' => 'fab fa-react'
         ]);
+
+        Skill::create([
+            'name' => 'GatsbyJS',
+            'type' => 'side',
+            'logo' => 'fab fa-gofore'
+        ]);
+
+        Skill::create([
+            'name' => 'NextJS',
+            'type' => 'side',
+            'logo' => 'fas fa-step-forward'
+        ]);
+
+        Skill::create([
+            'name' => 'NuxtJS',
+            'type' => 'side',
+            'logo' => 'fab fa-vuejs'
+        ]);
+
+        Skill::create([
+            'name' => 'GraphQL',
+            'type' => 'side',
+            'logo' => 'fas fa-project-diagram'
+        ]);
+
+        Skill::create([
+            'name' => 'Rest API',
+            'type' => 'side',
+            'logo' => 'fas fa-link'
+        ]);
+
+        Skill::create([
+            'name' => 'MongoDB',
+            'type' => 'side',
+            'logo' => 'fas fa-database'
+        ]);
+
+        Skill::create([
+            'name' => 'Firebase',
+            'type' => 'side',
+            'logo' => 'fab fa-pied-piper-square'
+        ]);
+
+        Skill::create([
+            'name' => 'Webpack',
+            'type' => 'side',
+            'logo' => 'fas fa-cube'
+        ]);
+
+        Skill::create([
+            'name' => 'Gulp',
+            'type' => 'side',
+            'logo' => 'fab fa-gulp'
+        ]);
+
+        Skill::create([
+            'name' => 'CSS-препроцессоры',
+            'type' => 'side',
+            'logo' => 'fab fa-sass'
+        ]);
+
+        Skill::create([
+            'name' => 'Bootstrap',
+            'type' => 'side',
+            'logo' => 'fab fa-bootstrap'
+        ]);
+
+        Skill::create([
+            'name' => 'Tailwind CSS',
+            'type' => 'side',
+            'logo' => 'fas fa-wind'
+        ]);
     }
 }
