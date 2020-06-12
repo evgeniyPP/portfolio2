@@ -17,11 +17,19 @@ class Skills extends Component
      */
     public function __construct()
     {
-        $this->mainSkills = Skill::where('type', 'main')->get();
-        $this->sideSkills = Skill::where('type', 'side')->get();
+        $this->mainSkills = Skill::where('type', 'main')->get()
+            ->transform(function ($skill) {
+                $this->addRankStyles($skill);
+                return $skill;
+            });
 
-        $this->addRankStyles($this->mainSkills);
-        $this->addRankStyles($this->sideSkills);
+        $allSideSkills = Skill::where('type', 'side')->get()
+            ->transform(function ($skill) {
+                $this->addRankStyles($skill);
+                return $skill;
+            });
+        $this->sideSkills = $allSideSkills->splice(0, 12);
+        $this->sideSkillsHidden = $allSideSkills;
     }
 
     /**
@@ -33,20 +41,19 @@ class Skills extends Component
     {
         return view('components.skills', [
             'mainSkills' => $this->mainSkills,
-            'sideSkills' => $this->sideSkills
+            'sideSkills' => $this->sideSkills,
+            'sideSkillsHidden' => $this->sideSkillsHidden
         ]);
     }
 
-    private function addRankStyles($skills)
+    private function addRankStyles($skill)
     {
-        foreach ($skills as $skill) {
-            if ($skill->rank <= 100) {
-                $skill['rank_style'] = 'text-yellow-500 font-normal';
-            } elseif ($skill->rank >= 200) {
-                $skill['rank_style'] = 'text-blue-400 font-semibold';
-            } else {
-                $skill['rank_style'] = 'text-green-400 font-medium';
-            }
+        if ($skill->rank <= 100) {
+            $skill['rank_style'] = 'text-yellow-500 font-normal';
+        } elseif ($skill->rank >= 200) {
+            $skill['rank_style'] = 'text-blue-400 font-semibold';
+        } else {
+            $skill['rank_style'] = 'text-green-400 font-medium';
         }
     }
 }
