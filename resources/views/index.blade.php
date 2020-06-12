@@ -5,4 +5,5 @@
     <x-main />
     <x-about-me />
     <x-links />
+    <x-skills />
 @endsection

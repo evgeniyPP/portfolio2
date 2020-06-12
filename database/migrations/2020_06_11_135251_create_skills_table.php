@@ -17,7 +17,7 @@ class CreateSkillsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('type');
-            $table->integer('rank');
+            $table->integer('rank')->nullable();
             $table->string('logo');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
