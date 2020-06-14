@@ -1,5 +1,5 @@
 <section class="text-gray-700 body-font">
-  <div class="container px-5 py-6 mx-auto">
+  <div class="container px-5 pt-8 pb-16 mx-auto">
     <h1 class="mb-12 text-2xl font-medium text-center text-gray-900 sm:text-3xl title-font">Ссылки</h1>
     <div class="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4">
       @foreach($links as $link)

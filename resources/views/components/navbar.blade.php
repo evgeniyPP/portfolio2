@@ -1,4 +1,4 @@
-<nav x-data="{ isOpen: false }" class="fixed top-0 w-full bg-gray-800">
+<nav x-data="{ isOpen: false }" class="fixed top-0 z-50 w-full bg-gray-800">
   <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="relative flex items-center justify-between h-16">
       <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">

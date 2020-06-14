@@ -6,4 +6,5 @@
     <x-about-me />
     <x-links />
     <x-skills />
+    <x-projects />
 @endsection
