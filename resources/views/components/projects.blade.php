@@ -6,10 +6,10 @@
     </div>
     <div class="flex flex-wrap -m-4">
       @foreach($projects as $project)
-        <div class="w-full p-4 xl:w-1/3 lg:w-1/2">
+        <div class="w-full p-4 xl:w-1/3 md:w-1/2">
           <div class="relative flex min-h-full">
-            <img alt="project preview desktop" class="absolute inset-0 object-cover object-top w-full h-full border" src="{{ $project->image_url }}">
-            <div class="relative z-10 w-full px-8 py-10 transition duration-500 ease-in-out bg-white border-4 border-gray-200 opacity-0 hover:opacity-100 focus:opacity-100" tabindex="0">
+            <img alt="project preview desktop" class="absolute inset-0 hidden object-cover object-top w-full h-full border sm:block" src="{{ $project->image_url }}">
+            <div class="relative z-10 w-full px-8 py-10 transition duration-500 ease-in-out bg-white border-4 border-gray-200 opacity-100 sm:opacity-0 hover:opacity-100 focus:opacity-100" tabindex="0">
               <h2 class="mb-1 text-xs font-medium tracking-widest text-indigo-500 uppercase title-font">{{ $project->stack }}</h2>
               <h1 class="mb-3 text-lg font-medium text-gray-900 title-font">{{ $project->name }}</h1>
               <p class="leading-relaxed">{{ $project->description }}</p>
