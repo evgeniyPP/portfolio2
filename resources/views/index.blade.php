@@ -7,4 +7,5 @@
     <x-links />
     <x-skills />
     <x-projects />
+    <x-contacts />
 @endsection

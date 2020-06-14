@@ -19,18 +19,6 @@ class MainSeeder extends Seeder
         ]);
 
         App\Main::create([
-            'type' => 'contacts',
-            'name' => 'по телефону',
-            'text' => '8-985-385-81-46',
-        ]);
-
-        App\Main::create([
-            'type' => 'contacts',
-            'name' => 'Telegram',
-            'text' => '@evgeniyPP',
-        ]);
-
-        App\Main::create([
             'type' => 'footer',
             'name' => 'Евгений Петрянкин',
             'text' => '2020',
