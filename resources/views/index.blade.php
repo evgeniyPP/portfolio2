@@ -8,4 +8,5 @@
     <x-skills />
     <x-projects />
     <x-contacts />
+    <x-footer />
 @endsection
