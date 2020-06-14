@@ -15,7 +15,7 @@ class Projects extends Component
      */
     public function __construct()
     {
-        $this->projects = Project::all();
+        $this->projects = Project::all()->sortBy('order');
     }
 
     /**
