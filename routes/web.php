@@ -14,3 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'index')->name('index');
+
+Route::get('/admin', function () {
+    return 'Здесь будет админка';
+})->name('admin');

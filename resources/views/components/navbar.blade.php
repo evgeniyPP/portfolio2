@@ -43,9 +43,9 @@
       <a x-on:click="isOpen = false" href="#contacts" class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Контакты
       </a>
       <div class="my-2 border-t border-gray-700"></div>
-      <a x-on:click="isOpen = false" href="#" class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Скачать резюме (.docx)
+      <a x-on:click="isOpen = false" href="storage/resume_petryankin.docx" download class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Скачать резюме (.docx)
       </a>
-      <a x-on:click="isOpen = false" href="#" class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Скачать эту страницу (.pdf)
+      <a x-on:click="isOpen = false" href="storage/resume_petryankin.pdf" download class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Скачать резюме (.pdf)
       </a>
     </div>
   </div>
