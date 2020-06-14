@@ -32,9 +32,9 @@
               <div class="mb-2">
                 <h2 class="text-lg font-medium text-gray-900 title-font">{{ $contact->name }}:</h2>
               </div>
-                <p class="text-xl leading-relaxed">
-                    <a href="{{ $contact->link }}" class="underline cursor-pointer" target="_blank" rel="noopener noreferrer">{{ $contact->text }}</a>
-                </p>
+              <p class="text-xl leading-relaxed">
+                <a href="{{ $contact->link }}" class="underline transition duration-150 ease-in-out cursor-pointer hover:text-gray-600 focus:text-gray-600" target="_blank" rel="noopener noreferrer">{{ $contact->text }}</a>
+              </p>
             </div>
           </div>
         @endforeach
