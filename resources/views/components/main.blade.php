@@ -1,4 +1,4 @@
-<section class="x-main">
+<section id="main" class="x-main">
   <div class="mt-16 text-gray-700 body-font">
     <div class="hidden sm:block sm:flex sm:w-full sm:justify-end sm:px-6">
       <a href="#" class="px-3 py-2 mt-1 text-sm font-medium text-gray-500 transition duration-150 ease-in-out rounded-md hover:text-gray-700 focus:outline-none focus:text-gray-700">Скачать резюме (.docx)

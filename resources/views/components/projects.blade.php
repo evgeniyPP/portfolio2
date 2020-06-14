@@ -1,4 +1,4 @@
-<section class="text-gray-700 body-font">
+<section id="projects" class="text-gray-700 body-font">
   <div class="container px-5 py-16 mx-auto">
     <div class="flex flex-col w-full mb-12 text-center">
       <h1 class="mb-6 text-2xl font-medium text-gray-900 sm:text-3xl title-font">Проекты</h1>
