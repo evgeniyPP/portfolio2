@@ -7,8 +7,10 @@
     <title>Евгений Петрянкин | Портфолио</title>
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/app.js" defer></script>
+    <livewire:styles>
 </head>
 <body>
     @yield('content')
+    <livewire:scripts>
 </body>
 </html>
