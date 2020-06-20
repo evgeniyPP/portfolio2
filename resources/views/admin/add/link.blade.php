@@ -32,16 +32,16 @@
     </div>
 
     <div class="pt-5 mt-6">
-      <div class="flex justify-end">
-        <span class="inline-flex rounded-md shadow-sm">
-          <a href="{{ route('admin.add') }}" class="px-6 py-3 text-base font-medium leading-5 text-gray-700 transition duration-300 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-500 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
-            Назад
-          </a>
-        </span>
-        <span class="inline-flex ml-3 rounded-md shadow-sm">
-          <button type="submit" class="inline-flex justify-center px-6 py-3 text-base font-medium leading-5 text-white transition duration-300 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-200 focus:shadow-outline-indigo active:bg-indigo-700">
+      <div class="flex justify-start">
+        <span class="inline-flex mr-3 rounded-md shadow-sm">
+          <button type="submit" class="inline-flex justify-center px-6 py-2 text-base font-medium leading-6 text-center text-indigo-700 transition duration-300 ease-in-out bg-indigo-200 border border-transparent rounded-md hover:bg-indigo-100 focus:outline-none focus:border-indigo-500 focus:shadow-outline-indigo active:bg-indigo-200">
             Добавить
           </button>
+        </span>
+        <span class="inline-flex rounded-md shadow-sm">
+          <a href="{{ route('admin.add') }}" class="px-6 py-2 text-base font-medium leading-5 text-gray-700 transition duration-300 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-500 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800">
+            Назад
+          </a>
         </span>
       </div>
     </div>
