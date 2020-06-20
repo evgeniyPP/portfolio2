@@ -9,25 +9,25 @@
     <div>
       <label for="title" class="block text-lg font-medium leading-5 text-gray-700">Заголовок ссылки</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="title" class="block w-full px-2 py-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Github" />
+        <input id="title" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Github" />
       </div>
     </div>
     <div class="mt-6">
       <label for="link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="link" class="block w-full px-2 py-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://github.com/evgeniyPP" />
+        <input id="link" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://github.com/evgeniyPP" />
       </div>
     </div>
     <div class="mt-6">
       <label for="logo" class="block text-lg font-medium leading-5 text-gray-700">Font Awesome классы для лого</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="logo" class="block w-full px-2 py-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="fab fa-github" />
+        <input id="logo" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="fab fa-github" />
       </div>
     </div>
     <div class="mt-6">
       <label for="description" class="block text-lg font-medium leading-5 text-gray-700">Описание</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <textarea id="description" class="block w-full px-2 py-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Ниже идет список..."></textarea>
+        <textarea id="description" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Ниже идет список..."></textarea>
       </div>
     </div>
 

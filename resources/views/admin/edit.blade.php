@@ -17,7 +17,7 @@
         Ссылку
       </a>
       <a href="{{ route('admin.edit.skill') }}" class="w-64 py-3 mt-4 text-base font-medium leading-6 text-center text-white transition duration-300 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 sm:text-lg">
-        Скилл
+        Навык
       </a>
       <a href="{{ route('admin.edit.contact') }}" class="w-64 py-3 mt-4 text-base font-medium leading-6 text-center text-white transition duration-300 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 sm:text-lg">
         Контакт
