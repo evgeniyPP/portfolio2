@@ -8,6 +8,19 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $mains = Main::all();
+
+        return view('admin.edit.main', [
+            'mains' => $mains
+        ]);
+    }
+    /**
      * Display the specified resource.
      *
      * @param  \App\Main  $main
