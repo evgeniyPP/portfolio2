@@ -45,7 +45,7 @@
     <div class="w-24 mt-6">
       <label for="order" class="block text-lg font-medium leading-5 text-gray-700">Место</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="order" type="number" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="2" />
+        <input id="order" type="number" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="2" min="1" />
       </div>
     </div>
 

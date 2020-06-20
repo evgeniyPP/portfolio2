@@ -15,7 +15,7 @@
     <div class="w-24 mt-6">
       <label for="rank" class="block text-lg font-medium leading-5 text-gray-700">Уровень</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="rank" type="number" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="242" />
+        <input id="rank" type="number" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="242" min="0" max="300" />
       </div>
     </div>
     <div class="mt-6">
