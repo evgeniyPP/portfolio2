@@ -21,7 +21,7 @@
   </div>
 
   <div class="pt-5 mt-6">
-    <div class="flex justify-start">
+    <div class="flex">
       <span class="inline-flex mr-3 rounded-md shadow-sm">
         <button type="submit" class="inline-flex justify-center px-6 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700">
           Изменить
