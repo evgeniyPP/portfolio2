@@ -2,22 +2,29 @@
   <div>
     <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
     <select wire:model="selectedName" id="name" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none sm:text-lg sm:leading-5">
-      @foreach($mains as $main)
-        <option>{{ $main->name }}</option>
+      @foreach($skills as $skill)
+        <option>{{ $skill->name }}</option>
       @endforeach
     </select>
   </div>
-  <div class="mt-6">
-    <label for="type" class="block text-lg font-medium leading-5 text-gray-700">Тип</label>
+  <div class="w-24 mt-6">
+    <label for="rank" class="block text-lg font-medium leading-5 text-gray-700">Уровень</label>
     <div class="relative mt-3 border-2 rounded-md">
-      <input wire:model="type" id="type" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" />
+      <input wire:model="rank" id="rank" type="number" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" min="0" max="300" />
     </div>
   </div>
   <div class="mt-6">
-    <label for="text" class="block text-lg font-medium leading-5 text-gray-700">Текст</label>
+    <label for="logo" class="block text-lg font-medium leading-5 text-gray-700">Font Awesome классы для лого</label>
     <div class="relative mt-3 border-2 rounded-md">
-      <textarea wire:model="text" id="text" class="block w-full h-32 p-2 form-input sm:text-lg sm:leading-5 focus:outline-none"></textarea>
+      <input wire:model="logo" id="logo" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" />
     </div>
+  </div>
+  <div class="mt-6">
+    <label for="type" class="block text-lg font-medium leading-5 text-gray-700">Тип</label>
+    <select wire:model="type" id="type" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none sm:text-lg sm:leading-5">
+      <option value="main">Основной</option>
+      <option value="side">Дополнительный</option>
+    </select>
   </div>
 
   <div class="pt-5 mt-6">
