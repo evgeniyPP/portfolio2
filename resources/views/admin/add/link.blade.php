@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<form class="flex items-center max-w-lg min-h-screen mx-4 sm:mx-auto">
-  <div class="w-full">
+<section class="flex flex-col justify-center max-w-lg min-h-screen mx-4 sm:mx-auto">
+  <h2 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+    Добавить ссылку
+  </h2>
+  <form class="w-full mt-8">
     <div>
       <label for="title" class="block text-lg font-medium leading-5 text-gray-700">Заголовок ссылки</label>
       <div class="relative mt-3 border-2 rounded-md">
@@ -42,6 +45,6 @@
         </span>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</section>
 @endsection
