@@ -19,5 +19,8 @@
       </div>
     </div>
   </div>
+  <div class="absolute bottom-0 right-0 mb-4 mr-6">
+    <a href="{{ route('index') }}" class="text-indigo-900 focus:outline-none focus:font-bold active:text-indigo-200">На главную</a>
+  </div>
 </div>
 @endsection
