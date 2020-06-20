@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'index')->name('index');
 
-Route::get('/admin', function () {
-    return 'Здесь будет админка';
-})->name('admin');
+Route::group(['prefix' => 'admin'], function () {
+    Route::view('/', 'admin.index')->name('admin');
+    Route::view('/edit', 'admin.edit')->name('admin.edit');
+    Route::view('/add', 'admin.add')->name('admin.add');
+});
