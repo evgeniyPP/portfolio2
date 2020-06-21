@@ -24,6 +24,7 @@ class CreateProjectsTable extends Migration
             $table->string('image_url');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
+            $table->softDeletes();
         });
     }
 
