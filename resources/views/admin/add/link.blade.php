@@ -5,29 +5,30 @@
   <h2 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
     Добавить ссылку
   </h2>
-  <form class="w-full mt-8">
+  <form method="post" class="w-full mt-8">
+    @csrf()
     <div>
-      <label for="title" class="block text-lg font-medium leading-5 text-gray-700">Заголовок ссылки</label>
+      <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="title" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Github" />
+        <input name="name" id="name" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Github" />
       </div>
     </div>
     <div class="mt-6">
       <label for="link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="link" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://github.com/evgeniyPP" />
+        <input name="link" id="link" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://github.com/evgeniyPP" />
       </div>
     </div>
     <div class="mt-6">
       <label for="logo" class="block text-lg font-medium leading-5 text-gray-700">Font Awesome классы для лого</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="logo" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="fab fa-github" />
+        <input name="logo" id="logo" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="fab fa-github" />
       </div>
     </div>
     <div class="mt-6">
       <label for="description" class="block text-lg font-medium leading-5 text-gray-700">Описание</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <textarea id="description" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Ниже идет список..."></textarea>
+        <textarea name="description" id="description" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Ниже идет список..."></textarea>
       </div>
     </div>
 

@@ -5,23 +5,24 @@
   <h2 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
     Добавить контакт
   </h2>
-  <form class="w-full mt-8">
+  <form method="post" class="w-full mt-8">
+    @csrf()
     <div>
-      <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Тип контакта</label>
+      <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="name" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="по телефону" />
+        <input name="name" id="name" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="по телефону" />
       </div>
     </div>
     <div class="mt-6">
       <label for="link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="link" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://wa.me/79853858146" />
+        <input name="link" id="link" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://wa.me/79853858146" />
       </div>
     </div>
     <div class="mt-6">
       <label for="text" class="block text-lg font-medium leading-5 text-gray-700">Контакт</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="text" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="8-985-385-81-46" />
+        <input name="text" id="text" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="8-985-385-81-46" />
       </div>
     </div>
 

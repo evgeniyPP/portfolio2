@@ -35,5 +35,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::view('/link', 'admin.add.link')->name('admin.add.link');
         Route::view('/skill', 'admin.add.skill')->name('admin.add.skill');
         Route::view('/contact', 'admin.add.contact')->name('admin.add.contact');
+
+        Route::post('/project', 'AddController@project');
+        Route::post('/link', 'AddController@link');
+        Route::post('/skill', 'AddController@skill');
+        Route::post('/contact', 'AddController@contact');
     });
 });

@@ -5,47 +5,48 @@
   <h2 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
     Добавить проект
   </h2>
-  <form class="w-full mt-8">
+  <form method="post" class="w-full mt-8">
+    @csrf()
     <div>
-      <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название проекта</label>
+      <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="name" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Spotlists v2" />
+        <input name="name" id="name" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Spotlists v2" />
       </div>
     </div>
     <div class="mt-6">
       <label for="stack" class="block text-lg font-medium leading-5 text-gray-700">Стек</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="stack" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="React, Typescript" />
+        <input name="stack" id="stack" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="React, Typescript" />
       </div>
     </div>
     <div class="mt-6">
       <label for="github_link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка на GitHub</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="github_link" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://github.com/evgeniyPP/spotlists" />
+        <input name="github_link" id="github_link" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://github.com/evgeniyPP/spotlists" />
       </div>
     </div>
     <div class="mt-6">
       <label for="preview_link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка на сайт</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="preview_link" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://epp-spotlists.herokuapp.com" />
+        <input name="preview_link" id="preview_link" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://epp-spotlists.herokuapp.com" />
       </div>
     </div>
     <div class="mt-6">
       <label for="link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка на изображение</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="image_url" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://hsto.org/webt/mb/wz/q8/mbwzq8mlcxvseydiwjmdjxj78co.png" />
+        <input name="image_url" id="image_url" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://hsto.org/webt/mb/wz/q8/mbwzq8mlcxvseydiwjmdjxj78co.png" />
       </div>
     </div>
     <div class="mt-6">
       <label for="description" class="block text-lg font-medium leading-5 text-gray-700">Описание</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <textarea id="description" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Давным-давно..."></textarea>
+        <textarea name="description" id="description" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="Давным-давно..."></textarea>
       </div>
     </div>
     <div class="w-24 mt-6">
       <label for="order" class="block text-lg font-medium leading-5 text-gray-700">Место</label>
       <div class="relative mt-3 border-2 rounded-md">
-        <input id="order" type="number" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="2" min="1" max="12" />
+        <input name="order" id="order" type="number" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="2" min="1" max="12" />
       </div>
     </div>
 
