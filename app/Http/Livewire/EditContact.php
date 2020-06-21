@@ -41,11 +41,12 @@ class EditContact extends Component
 
     public function submit()
     {
-        $this->selected->update([
-            'name' => $this->name,
-            'link' => $this->link,
-            'text' => $this->text,
+        $data = $this->validate([
+            'name' => 'required|string|min:2|max:255',
+            'link' => 'required|string|max:255',
+            'text' => 'required|string|max:255',
         ]);
+        $this->selected->update($data);
         $this->redirect(route('admin.edit'));
     }
 

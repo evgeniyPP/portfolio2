@@ -1,7 +1,7 @@
 <form wire:submit.prevent="submit" class="w-full mt-8">
   <div>
     <label for="selectedName" class="block text-lg font-medium leading-5 text-gray-700">Выберите навык:</label>
-    <select wire:model="selectedName" id="selectedName" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none sm:text-lg sm:leading-5">
+    <select wire:model="selectedName" id="selectedName" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md focus:border-gray-500 form-select focus:outline-none sm:text-lg sm:leading-5">
       @foreach($skills as $skill)
         <option>{{ $skill->name }}</option>
       @endforeach
