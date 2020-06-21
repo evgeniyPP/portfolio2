@@ -44,12 +44,13 @@ class EditLink extends Component
 
     public function submit()
     {
-        $this->selected->update([
-            'name' => $this->name,
-            'link' => $this->link,
-            'description' => $this->description,
-            'logo' => $this->logo,
+        $data = $this->validate([
+            'name' => 'required|string|min:2|max:255',
+            'link' => 'required|url|max:255',
+            'logo' => 'required|string|min:8|max:255',
+            'description' => 'required|string|min:5',
         ]);
+        $this->selected->update($data);
         $this->redirect(route('admin.edit'));
     }
 
