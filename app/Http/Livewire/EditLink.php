@@ -47,7 +47,7 @@ class EditLink extends Component
         $data = $this->validate([
             'name' => 'required|string|min:2|max:255',
             'link' => 'required|url|max:255',
-            'logo' => 'required|string|min:8|max:255',
+            'logo' => 'required|string|regex:/^fa. fa-.+$/',
             'description' => 'required|string|min:5',
         ]);
         $this->selected->update($data);

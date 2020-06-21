@@ -48,7 +48,7 @@ class EditSkill extends Component
             'name' => 'required|string|min:2|max:255',
             'type' => ['required', 'regex:/^main|side$/'],
             'rank' => 'nullable|numeric|min:0|max:300',
-            'logo' => 'required|string|min:8|max:255',
+            'logo' => 'required|string|regex:/^fa. fa-.+$/',
         ]);
         $this->selected->update($data);
         $this->redirect(route('admin.edit'));

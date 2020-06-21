@@ -42,7 +42,7 @@ class AddController extends Controller
         $data = $request->validate([
             'name' => 'required|string|unique:links|min:2|max:255',
             'link' => 'required|url|max:255',
-            'logo' => 'required|string|min:8|max:255',
+            'logo' => 'required|string|regex:/^fa. fa-.+$/',
             'description' => 'required|string|min:5',
         ]);
         $link->create($data);
@@ -61,7 +61,7 @@ class AddController extends Controller
             'name' => 'required|string|unique:skills|min:2|max:255',
             'type' => ['required', 'regex:/^main|side$/'],
             'rank' => 'nullable|numeric|min:0|max:300',
-            'logo' => 'required|string|min:8|max:255',
+            'logo' => 'required|string|regex:/^fa. fa-.+$/',
         ]);
         $skill->create($data);
         return redirect(route('admin.add'));
