@@ -53,15 +53,16 @@ class EditProject extends Component
 
     public function submit()
     {
-        $this->selected->update([
-            'name' => $this->name,
-            'stack' => $this->stack,
-            'description' => $this->description,
-            'github_link' => $this->github_link,
-            'preview_link' => $this->preview_link,
-            'image_url' => $this->image_url,
-            'order' => $this->order,
+        $data = $this->validate([
+            'name' => 'required|string|min:2|max:255',
+            'stack' => 'required|string|max:255',
+            'github_link' => 'required|url|max:255',
+            'preview_link' => 'required|url|max:255',
+            'image_url' => 'required|string|max:255',
+            'description' => 'required|string|min:5',
+            'order' => 'required|numeric|min:1|max:12',
         ]);
+        $this->selected->update($data);
         $this->redirect(route('admin.edit'));
     }
 
