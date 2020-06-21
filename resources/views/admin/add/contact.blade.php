@@ -9,21 +9,51 @@
     @csrf()
     <div>
       <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
-      <div class="relative mt-3 border-2 rounded-md">
-        <input name="name" id="name" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="по телефону" />
+      <div class="relative mt-3">
+        <input name="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="по телефону" value="{{ old('name') }}" />
+        @error('name')
+          <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        @enderror
       </div>
+      @error('name')
+        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+      @enderror
     </div>
     <div class="mt-6">
       <label for="link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка</label>
-      <div class="relative mt-3 border-2 rounded-md">
-        <input name="link" id="link" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="https://wa.me/79853858146" />
+      <div class="relative mt-3">
+        <input name="link" id="link" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('link') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="https://wa.me/79853858146" value="{{ old('link') }}" />
+        @error('link')
+          <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        @enderror
       </div>
+      @error('link')
+        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+      @enderror
     </div>
     <div class="mt-6">
       <label for="text" class="block text-lg font-medium leading-5 text-gray-700">Контакт</label>
-      <div class="relative mt-3 border-2 rounded-md">
-        <input name="text" id="text" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="8-985-385-81-46" />
+      <div class="relative mt-3">
+        <input name="text" id="text" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('text') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="8-985-385-81-46" value="{{ old('text') }}" />
+        @error('text')
+          <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        @enderror
       </div>
+      @error('text')
+        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+      @enderror
     </div>
 
     <div class="pt-5 mt-6">

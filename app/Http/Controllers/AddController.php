@@ -62,7 +62,11 @@ class AddController extends Controller
      */
     public function contact(Request $request, Contact $contact)
     {
-        $data = $request->except(['_token']);
+        $data = $request->validate([
+            'name' => 'required|string|unique:contacts|min:2|max:255',
+            'link' => 'required|string|max:255',
+            'text' => 'required|string|max:255',
+        ]);
         $contact->create($data);
         return redirect(route('admin.add'));
     }
