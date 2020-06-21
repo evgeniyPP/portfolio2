@@ -31,7 +31,12 @@ class AddController extends Controller
      */
     public function link(Request $request, Link $link)
     {
-        $data = $request->except(['_token']);
+        $data = $request->validate([
+            'name' => 'required|string|unique:links|min:2|max:255',
+            'link' => 'required|url|max:255',
+            'logo' => 'required|string|min:8|max:255',
+            'description' => 'required|string|min:5',
+        ]);
         $link->create($data);
         return redirect(route('admin.add'));
     }
