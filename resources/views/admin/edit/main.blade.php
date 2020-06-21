@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <section class="flex flex-col justify-center max-w-lg min-h-screen py-6 mx-4 sm:mx-auto">
