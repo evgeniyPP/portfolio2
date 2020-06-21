@@ -15,8 +15,8 @@ class CreateMainsTable extends Migration
     {
         Schema::create('mains', function (Blueprint $table) {
             $table->id();
+            $table->string('type')->unique();
             $table->string('name');
-            $table->string('type')->nullable();
             $table->text('text');
         });
     }
