@@ -32,10 +32,11 @@ class EditMain extends Component
 
     public function submit()
     {
-        $this->selected->update([
-            'name' => $this->name,
-            'text' => $this->text,
+        $data = $this->validate([
+            'name' => 'required|string|min:2|max:255',
+            'text' => 'required|string|min:5',
         ]);
+        $this->selected->update($data);
         $this->redirect(route('admin.edit'));
     }
 
