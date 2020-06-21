@@ -11,6 +11,7 @@ class EditContact extends Component
     public $selectedName;
     public $selected;
 
+    public $name;
     public $link;
     public $text;
 
@@ -19,6 +20,7 @@ class EditContact extends Component
         $this->contacts = Contact::all();
         $this->selectedName = $this->contacts[0]->name;
         $this->selected = $this->contacts[0];
+        $this->name = $this->selectedName;
         $this->link = $this->selected->link;
         $this->text = $this->selected->text;
     }
@@ -26,8 +28,25 @@ class EditContact extends Component
     public function updatedSelectedName()
     {
         $this->selected = $this->contacts->where('name', $this->selectedName)->first();
+        $this->name = $this->selectedName;
         $this->link = $this->selected->link;
         $this->text = $this->selected->text;
+    }
+
+    public function delete()
+    {
+        $this->selected->delete();
+        $this->redirect(route('admin.edit'));
+    }
+
+    public function submit()
+    {
+        $this->selected->update([
+            'name' => $this->name,
+            'link' => $this->link,
+            'text' => $this->text,
+        ]);
+        $this->redirect(route('admin.edit'));
     }
 
     public function render()

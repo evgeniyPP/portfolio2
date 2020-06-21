@@ -18,6 +18,7 @@ class CreateContactsTable extends Migration
             $table->string('name');
             $table->string('link');
             $table->text('text');
+            $table->softDeletes();
         });
     }
 
