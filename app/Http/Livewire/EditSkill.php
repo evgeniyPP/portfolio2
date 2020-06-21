@@ -44,12 +44,13 @@ class EditSkill extends Component
 
     public function submit()
     {
-        $this->selected->update([
-            'name' => $this->name,
-            'type' => $this->type,
-            'rank' => $this->rank === '' ? null : $this->rank,
-            'logo' => $this->logo,
+        $data = $this->validate([
+            'name' => 'required|string|min:2|max:255',
+            'type' => ['required', 'regex:/^main|side$/'],
+            'rank' => 'nullable|numeric|min:0|max:300',
+            'logo' => 'required|string|min:8|max:255',
         ]);
+        $this->selected->update($data);
         $this->redirect(route('admin.edit'));
     }
 
