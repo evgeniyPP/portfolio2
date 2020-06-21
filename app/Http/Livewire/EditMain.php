@@ -11,7 +11,7 @@ class EditMain extends Component
     public $selectedName;
     public $selected;
 
-    public $type;
+    public $name;
     public $text;
 
     public function mount()
@@ -19,15 +19,24 @@ class EditMain extends Component
         $this->mains = Main::all();
         $this->selectedName = $this->mains[0]->name;
         $this->selected = $this->mains[0];
-        $this->type = $this->selected->type;
+        $this->name = $this->selectedName;
         $this->text = $this->selected->text;
     }
 
     public function updatedSelectedName()
     {
         $this->selected = $this->mains->where('name', $this->selectedName)->first();
-        $this->type = $this->selected->type;
+        $this->name = $this->selectedName;
         $this->text = $this->selected->text;
+    }
+
+    public function submit()
+    {
+        $this->selected->update([
+            'name' => $this->name,
+            'text' => $this->text,
+        ]);
+        $this->redirect(route('admin.edit'));
     }
 
     public function render()

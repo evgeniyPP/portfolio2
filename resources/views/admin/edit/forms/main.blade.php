@@ -1,16 +1,16 @@
-<form class="w-full mt-8">
+<form wire:submit.prevent="submit" class="w-full mt-8">
   <div>
-    <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
-    <select wire:model="selectedName" id="name" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none sm:text-lg sm:leading-5">
+    <label for="selectedName" class="block text-lg font-medium leading-5 text-gray-700">Выберите пункт:</label>
+    <select wire:model="selectedName" id="selectedName" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none sm:text-lg sm:leading-5">
       @foreach($mains as $main)
         <option>{{ $main->name }}</option>
       @endforeach
     </select>
   </div>
-  <div class="mt-6">
-    <label for="type" class="block text-lg font-medium leading-5 text-gray-700">Тип</label>
+  <div class="pt-6 mt-6 border-t-2 border-gray-300">
+    <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
     <div class="relative mt-3 border-2 rounded-md">
-      <input wire:model="type" id="type" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" />
+      <input wire:model="name" id="name" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" />
     </div>
   </div>
   <div class="mt-6">
