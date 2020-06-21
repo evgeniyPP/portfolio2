@@ -9,28 +9,62 @@
     @csrf()
     <div>
       <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
-      <div class="relative mt-3 border-2 rounded-md">
-        <input name="name" id="name" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="JavaScript" />
+      <div class="relative mt-3">
+        <input name="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="JavaScript" value="{{ old('name') }}" />
+        @error('name')
+          <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        @enderror
       </div>
+      @error('name')
+        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+      @enderror
     </div>
     <div class="w-24 mt-6">
       <label for="rank" class="block text-lg font-medium leading-5 text-gray-700">Уровень</label>
-      <div class="relative mt-3 border-2 rounded-md">
-        <input name="rank" id="rank" type="number" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="242" min="0" max="300" />
+      <div class="relative mt-3">
+        <input name="rank" id="rank" type="number" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('rank') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="242" min="0" max="300" value="{{ old('rank') }}" />
+        @error('rank')
+          <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        @enderror
       </div>
+      <p class="mt-1 text-sm text-gray-600">необязательно</p>
+      @error('rank')
+        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+      @enderror
     </div>
     <div class="mt-6">
       <label for="logo" class="block text-lg font-medium leading-5 text-gray-700">Font Awesome классы для лого</label>
-      <div class="relative mt-3 border-2 rounded-md">
-        <input name="logo" id="logo" class="block w-full p-2 form-input sm:text-lg sm:leading-5 focus:outline-none" placeholder="fab fa-js-square" />
+      <div class="relative mt-3">
+        <input name="logo" id="logo" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('logo') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="fab fa-js-square" value="{{ old('logo') }}" />
+        @error('logo')
+          <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        @enderror
       </div>
+      @error('logo')
+        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+      @enderror
     </div>
     <div class="mt-6">
       <label for="type" class="block text-lg font-medium leading-5 text-gray-700">Тип</label>
-      <select name="type" id="type" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none sm:text-lg sm:leading-5">
+      <select name="type" id="type" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none focus:border-gray-500 sm:text-lg sm:leading-5 @error('type') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror">
         <option value="main" selected>Основной</option>
         <option value="side">Дополнительный</option>
       </select>
+      @error('type')
+        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+      @enderror
     </div>
 
     <div class="pt-5 mt-6">
