@@ -21,6 +21,7 @@ class CreateSkillsTable extends Migration
             $table->string('logo');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
+            $table->softDeletes();
         });
     }
 
