@@ -10,7 +10,7 @@
     <div>
       <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
       <div class="relative mt-3">
-        <input name="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="Github" value="{{ old('name') }}" />
+        <input name="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="Github" value="{{ old('name') }}" />
         @error('name')
           <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -26,7 +26,7 @@
     <div class="mt-6">
       <label for="link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка</label>
       <div class="relative mt-3">
-        <input name="link" id="link" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('link') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="https://github.com/evgeniyPP" value="{{ old('link') }}" />
+        <input name="link" id="link" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('link') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="https://github.com/evgeniyPP" value="{{ old('link') }}" />
         @error('link')
           <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -42,7 +42,7 @@
     <div class="mt-6">
       <label for="logo" class="block text-lg font-medium leading-5 text-gray-700">Font Awesome классы для лого</label>
       <div class="relative mt-3">
-        <input name="logo" id="logo" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('logo') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="fab fa-github" value="{{ old('logo') }}" />
+        <input name="logo" id="logo" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('logo') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="fab fa-github" value="{{ old('logo') }}" />
         @error('logo')
           <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -58,7 +58,7 @@
     <div class="mt-6">
       <label for="description" class="block text-lg font-medium leading-5 text-gray-700">Описание</label>
       <div class="relative mt-3">
-        <textarea name="description" id="description" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('description') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="Ниже идет список...">{{ old('description') }}</textarea>
+        <textarea name="description" id="description" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('description') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="Ниже идет список...">{{ old('description') }}</textarea>
         @error('description')
           <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">

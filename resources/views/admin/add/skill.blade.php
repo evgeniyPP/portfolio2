@@ -10,7 +10,7 @@
     <div>
       <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
       <div class="relative mt-3">
-        <input name="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="JavaScript" value="{{ old('name') }}" />
+        <input name="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="JavaScript" value="{{ old('name') }}" />
         @error('name')
           <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -26,7 +26,7 @@
     <div class="w-24 mt-6">
       <label for="rank" class="block text-lg font-medium leading-5 text-gray-700">Уровень</label>
       <div class="relative mt-3">
-        <input name="rank" id="rank" type="number" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('rank') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="242" min="0" max="300" value="{{ old('rank') }}" />
+        <input name="rank" id="rank" type="number" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('rank') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="242" min="0" max="300" value="{{ old('rank') }}" />
         @error('rank')
           <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -43,7 +43,7 @@
     <div class="mt-6">
       <label for="logo" class="block text-lg font-medium leading-5 text-gray-700">Font Awesome классы для лого</label>
       <div class="relative mt-3">
-        <input name="logo" id="logo" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('logo') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror" placeholder="fab fa-js-square" value="{{ old('logo') }}" />
+        <input name="logo" id="logo" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('logo') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="fab fa-js-square" value="{{ old('logo') }}" />
         @error('logo')
           <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -58,7 +58,7 @@
     </div>
     <div class="mt-6">
       <label for="type" class="block text-lg font-medium leading-5 text-gray-700">Тип</label>
-      <select name="type" id="type" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none focus:border-gray-500 sm:text-lg sm:leading-5 @error('type') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 @enderror">
+      <select name="type" id="type" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none focus:border-gray-500 sm:text-lg sm:leading-5 @error('type') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror">
         <option value="main" selected>Основной</option>
         <option value="side">Дополнительный</option>
       </select>
