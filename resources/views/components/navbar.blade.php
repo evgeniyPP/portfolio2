@@ -25,6 +25,9 @@
             </a>
             <a href="#contacts" class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Контакты
             </a>
+            <div class="mx-2 my-1 border-l-2 border-gray-600"></div>
+            <a href="{{ route('admin') }}" class="px-3 py-2 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700" target="_blank" rel="noopener noreferrer">Админка
+            </a>
           </div>
         </div>
       </div>
@@ -41,6 +44,9 @@
       <a x-on:click="isOpen = false" href="#projects" class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Проекты
       </a>
       <a x-on:click="isOpen = false" href="#contacts" class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Контакты
+      </a>
+      <div class="my-2 border-t border-gray-700"></div>
+      <a x-on:click="isOpen = false" href="{{ route('admin') }}" class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700" target="_blank" rel="noopener noreferrer">Админка
       </a>
       <div class="my-2 border-t border-gray-700"></div>
       <a x-on:click="isOpen = false" href="storage/resume_petryankin.docx" download class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Скачать резюме (.docx)
