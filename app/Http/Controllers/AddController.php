@@ -18,7 +18,15 @@ class AddController extends Controller
      */
     public function project(Request $request, Project $project)
     {
-        $data = $request->except(['_token']);
+        $data = $request->validate([
+            'name' => 'required|string|unique:projects|min:2|max:255',
+            'stack' => 'required|string|max:255',
+            'github_link' => 'required|url|max:255',
+            'preview_link' => 'required|url|max:255',
+            'image_url' => 'required|string|max:255',
+            'description' => 'required|string|min:5',
+            'order' => 'required|numeric|min:1|max:12',
+        ]);
         $project->create($data);
         return redirect(route('admin.add'));
     }
