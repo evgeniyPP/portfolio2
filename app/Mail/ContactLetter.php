@@ -20,11 +20,11 @@ class ContactLetter extends Mailable
      *
      * @return void
      */
-    public function __construct($name, $contact, $text)
+    public function __construct($data)
     {
-        $this->name = $name;
-        $this->contact = $contact;
-        $this->text = nl2br(htmlspecialchars($text));
+        $this->name = $data['name'];
+        $this->contact = $data['contact'];
+        $this->text = nl2br(htmlspecialchars($data['text']));
     }
 
     /**

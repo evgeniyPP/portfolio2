@@ -15,15 +15,16 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->integer('order');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('stack');
-            $table->text('description');
             $table->string('github_link');
             $table->string('preview_link');
             $table->string('image_url');
+            $table->text('description');
+            $table->integer('order');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
+            $table->softDeletes();
         });
     }
 
