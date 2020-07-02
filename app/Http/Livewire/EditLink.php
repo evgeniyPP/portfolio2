@@ -16,6 +16,8 @@ class EditLink extends Component
     public $description;
     public $logo;
 
+    public $isAuth;
+
     public function mount()
     {
         $this->links = Link::all();
@@ -25,6 +27,7 @@ class EditLink extends Component
         $this->link = $this->selected->link;
         $this->description = $this->selected->description;
         $this->logo = $this->selected->logo;
+        $this->isAuth = auth()->check();
     }
 
     public function updatedSelectedName()
@@ -38,6 +41,10 @@ class EditLink extends Component
 
     public function delete()
     {
+        if (!$this->isAuth) {
+            return;
+        }
+
         $this->selected->delete();
         $this->redirect(route('admin.edit'));
     }
@@ -50,6 +57,11 @@ class EditLink extends Component
             'logo' => 'required|string|regex:/^fa. fa-.+$/',
             'description' => 'required|string|min:5',
         ]);
+
+        if (!$this->isAuth) {
+            return;
+        }
+
         $this->selected->update($data);
         $this->redirect(route('admin.edit'));
     }

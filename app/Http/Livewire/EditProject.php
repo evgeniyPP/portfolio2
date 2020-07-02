@@ -19,6 +19,8 @@ class EditProject extends Component
     public $image_url;
     public $order;
 
+    public $isAuth;
+
     public function mount()
     {
         $this->projects = Project::all();
@@ -31,6 +33,7 @@ class EditProject extends Component
         $this->preview_link = $this->selected->preview_link;
         $this->image_url = $this->selected->image_url;
         $this->order = $this->selected->order;
+        $this->isAuth = auth()->check();
     }
 
     public function updatedSelectedName()
@@ -47,6 +50,10 @@ class EditProject extends Component
 
     public function delete()
     {
+        if (!$this->isAuth) {
+            return;
+        }
+
         $this->selected->delete();
         $this->redirect(route('admin.edit'));
     }
@@ -62,6 +69,11 @@ class EditProject extends Component
             'description' => 'required|string|min:5',
             'order' => 'required|numeric|min:1|max:12',
         ]);
+
+        if (!$this->isAuth) {
+            return;
+        }
+
         $this->selected->update($data);
         $this->redirect(route('admin.edit'));
     }

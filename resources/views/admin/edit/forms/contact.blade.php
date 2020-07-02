@@ -59,12 +59,12 @@
   <div class="pt-5 mt-6">
     <div class="flex">
       <span class="inline-flex mr-1 rounded-md shadow-sm sm:mr-3">
-        <button type="submit" class="inline-flex justify-center px-3 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 rounded-md sm:px-6 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700">
+        <button @if(!$isAuth) disabled @endif type="submit" class="inline-flex justify-center px-3 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 rounded-md sm:px-6 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 @if(!$isAuth) opacity-50 cursor-not-allowed @endif">
           Изменить
         </button>
       </span>
       <span class="inline-flex mr-1 rounded-md shadow-sm sm:mr-3">
-        <button wire:click="delete" type="button" class="inline-flex justify-center px-3 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-red-600 rounded-md sm:px-6 hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-700">
+        <button @if(!$isAuth) disabled @endif wire:click="delete" type="button" class="inline-flex justify-center px-3 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-red-600 rounded-md sm:px-6 hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-700 @if(!$isAuth) opacity-50 cursor-not-allowed @endif">
           Удалить
         </button>
       </span>
@@ -75,4 +75,8 @@
       </span>
     </div>
   </div>
+
+  @if(!$isAuth)
+    <x-alert.error message='У вас нет доступа. <br> Чтобы что-то менять, <a href="/login" class="font-medium underline">авторизуйтесь</a>.' triggerEvent="noauth" />
+  @endif
 </form>

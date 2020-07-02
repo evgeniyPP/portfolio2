@@ -20,8 +20,11 @@
     </div>
   </div>
   <div class="absolute bottom-0 right-0 mb-4 mr-6">
-    <a href="{{ route('index') }}" class="text-indigo-900 focus:outline-none focus:font-bold active:text-indigo-200">На главную</a>
+    <a href="{{ route('index') }}" class="block text-indigo-900 hover:underline focus:outline-none focus:underline active:text-indigo-200">На главную</a>
   </div>
-  <x-alert.warning message='Смотреть можно, трогать нельзя. <br> Чтобы что-то менять, <a href="#" class="font-medium underline">авторизуйтесь</a>.' />
+
+  @if(!auth()->check())
+    <x-alert.warning message='Смотреть можно, трогать нельзя. <br> Чтобы что-то менять, <a href="/login" class="font-medium underline">авторизуйтесь</a>.' />
+  @endif
 </div>
 @endsection

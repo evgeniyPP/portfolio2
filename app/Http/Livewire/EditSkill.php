@@ -16,6 +16,8 @@ class EditSkill extends Component
     public $rank;
     public $logo;
 
+    public $isAuth;
+
     public function mount()
     {
         $this->skills = Skill::all();
@@ -25,6 +27,7 @@ class EditSkill extends Component
         $this->type = $this->selected->type;
         $this->rank = $this->selected->rank;
         $this->logo = $this->selected->logo;
+        $this->isAuth = auth()->check();
     }
 
     public function updatedSelectedName()
@@ -38,6 +41,10 @@ class EditSkill extends Component
 
     public function delete()
     {
+        if (!$this->isAuth) {
+            return;
+        }
+
         $this->selected->delete();
         $this->redirect(route('admin.edit'));
     }
@@ -50,6 +57,11 @@ class EditSkill extends Component
             'rank' => 'nullable|numeric|min:0|max:300',
             'logo' => 'required|string|regex:/^fa. fa-.+$/',
         ]);
+
+        if (!$this->isAuth) {
+            return;
+        }
+
         $this->selected->update($data);
         $this->redirect(route('admin.edit'));
     }

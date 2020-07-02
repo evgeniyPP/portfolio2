@@ -15,6 +15,8 @@ class EditContact extends Component
     public $link;
     public $text;
 
+    public $isAuth;
+
     public function mount()
     {
         $this->contacts = Contact::all();
@@ -23,6 +25,7 @@ class EditContact extends Component
         $this->name = $this->selectedName;
         $this->link = $this->selected->link;
         $this->text = $this->selected->text;
+        $this->isAuth = auth()->check();
     }
 
     public function updatedSelectedName()
@@ -35,6 +38,10 @@ class EditContact extends Component
 
     public function delete()
     {
+        if (!$this->isAuth) {
+            return;
+        }
+
         $this->selected->delete();
         $this->redirect(route('admin.edit'));
     }
@@ -46,6 +53,11 @@ class EditContact extends Component
             'link' => 'required|string|max:255',
             'text' => 'required|string|max:255',
         ]);
+
+        if (!$this->isAuth) {
+            return;
+        }
+
         $this->selected->update($data);
         $this->redirect(route('admin.edit'));
     }
