@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'index')->name('index');
 
+Route::livewire('/login', 'login');
+
 Route::group(['prefix' => 'admin'], function () {
     Route::view('/', 'admin')->name('admin');
 

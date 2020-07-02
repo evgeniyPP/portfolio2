@@ -123,7 +123,7 @@
     <div class="pt-5 mt-6">
       <div class="flex justify-start">
         <span class="inline-flex mr-3 rounded-md shadow-sm">
-          <button type="submit" class="inline-flex justify-center px-6 py-2 text-base font-medium leading-6 text-center text-indigo-700 transition duration-300 ease-in-out bg-indigo-200 border border-transparent rounded-md hover:bg-indigo-100 focus:outline-none focus:border-indigo-500 focus:shadow-outline-indigo active:bg-indigo-200">
+          <button @if(!auth()->check()) disabled @endif type="submit" class="inline-flex justify-center px-6 py-2 text-base font-medium leading-6 text-center text-indigo-700 transition duration-300 ease-in-out bg-indigo-200 border border-transparent rounded-md hover:bg-indigo-100 focus:outline-none focus:border-indigo-500 focus:shadow-outline-indigo active:bg-indigo-200 @if(!auth()->check()) opacity-50 cursor-not-allowed @endif">
             Добавить
           </button>
         </span>
@@ -135,5 +135,9 @@
       </div>
     </div>
   </form>
+
+  @if(!auth()->check())
+    <x-alert.error message='У вас нет доступа. <br> Чтобы что-то добавить, <a href="/login" class="font-medium underline">авторизуйтесь</a>.' />
+  @endif
 </section>
 @endsection

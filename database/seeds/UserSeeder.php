@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         App\User::create([
-            'login' => 'kerim',
+            'login' => env('ADMIN_LOGIN'),
             'password' => Hash::make(env('ADMIN_PASSWORD')),
         ]);
     }

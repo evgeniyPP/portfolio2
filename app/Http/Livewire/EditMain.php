@@ -14,6 +14,8 @@ class EditMain extends Component
     public $name;
     public $text;
 
+    public $isAuth;
+
     public function mount()
     {
         $this->mains = Main::all();
@@ -21,6 +23,7 @@ class EditMain extends Component
         $this->selected = $this->mains[0];
         $this->name = $this->selectedName;
         $this->text = $this->selected->text;
+        $this->isAuth = auth()->check();
     }
 
     public function updatedSelectedName()
@@ -36,6 +39,11 @@ class EditMain extends Component
             'name' => 'required|string|min:2|max:255',
             'text' => 'required|string|min:5',
         ]);
+
+        if (!$this->isAuth) {
+            return;
+        }
+
         $this->selected->update($data);
         $this->redirect(route('admin.edit'));
     }

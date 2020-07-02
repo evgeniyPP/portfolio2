@@ -27,6 +27,11 @@ class AddController extends Controller
             'description' => 'required|string|min:5',
             'order' => 'required|numeric|min:1|max:12',
         ]);
+
+        if (!auth()->check()) {
+            return;
+        }
+
         $project->create($data);
         return redirect(route('admin.add'));
     }
@@ -45,6 +50,11 @@ class AddController extends Controller
             'logo' => 'required|string|regex:/^fa. fa-.+$/',
             'description' => 'required|string|min:5',
         ]);
+
+        if (!auth()->check()) {
+            return;
+        }
+
         $link->create($data);
         return redirect(route('admin.add'));
     }
@@ -63,6 +73,11 @@ class AddController extends Controller
             'rank' => 'nullable|numeric|min:0|max:300',
             'logo' => 'required|string|regex:/^fa. fa-.+$/',
         ]);
+
+        if (!auth()->check()) {
+            return;
+        }
+
         $skill->create($data);
         return redirect(route('admin.add'));
     }
@@ -80,6 +95,11 @@ class AddController extends Controller
             'link' => 'required|string|max:255',
             'text' => 'required|string|max:255',
         ]);
+
+        if (!auth()->check()) {
+            return;
+        }
+
         $contact->create($data);
         return redirect(route('admin.add'));
     }
