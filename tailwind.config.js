@@ -1,6 +1,6 @@
 module.exports = {
     purge: {
-        content: ["./resources/views/**/*.blade.php"],
+        content: ["./resources/views/**/*"],
         options: {
             whitelist: [
                 "text-yellow-500",
