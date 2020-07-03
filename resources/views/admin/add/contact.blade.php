@@ -8,9 +8,9 @@
   <form method="post" class="w-full mt-8">
     @csrf()
     <div>
-      <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
+      <label for="name" class="input-label">Название</label>
       <div class="relative mt-3">
-        <input name="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="по телефону" value="{{ old('name') }}" />
+        <input name="name" id="name" class="input form-input @error('name') input-error placeholder-red-300 @enderror" placeholder="по телефону" value="{{ old('name') }}" />
         @error('name')
           <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -20,13 +20,13 @@
         @enderror
       </div>
       @error('name')
-        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+        <p class="validation-error">{{ $message }}</p>
       @enderror
     </div>
     <div class="mt-6">
-      <label for="link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка</label>
+      <label for="link" class="input-label">Cсылка</label>
       <div class="relative mt-3">
-        <input name="link" id="link" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('link') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="https://wa.me/79853858146" value="{{ old('link') }}" />
+        <input name="link" id="link" class="input form-input @error('link') input-error placeholder-red-300 @enderror" placeholder="https://wa.me/79853858146" value="{{ old('link') }}" />
         @error('link')
           <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -36,13 +36,13 @@
         @enderror
       </div>
       @error('link')
-        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+        <p class="validation-error">{{ $message }}</p>
       @enderror
     </div>
     <div class="mt-6">
-      <label for="text" class="block text-lg font-medium leading-5 text-gray-700">Контакт</label>
+      <label for="text" class="input-label">Контакт</label>
       <div class="relative mt-3">
-        <input name="text" id="text" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('text') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="8-985-385-81-46" value="{{ old('text') }}" />
+        <input name="text" id="text" class="input form-input @error('text') input-error placeholder-red-300 @enderror" placeholder="8-985-385-81-46" value="{{ old('text') }}" />
         @error('text')
           <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -52,7 +52,7 @@
         @enderror
       </div>
       @error('text')
-        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+        <p class="validation-error">{{ $message }}</p>
       @enderror
     </div>
 

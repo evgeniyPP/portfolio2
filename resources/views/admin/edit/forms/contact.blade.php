@@ -1,16 +1,16 @@
 <form wire:submit.prevent="submit" class="w-full mt-8">
   <div>
-    <label for="selectedName" class="block text-lg font-medium leading-5 text-gray-700">Выберите контакт:</label>
-    <select wire:model="selectedName" id="selectedName" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md focus:border-gray-500 form-select focus:outline-none sm:text-lg sm:leading-5">
+    <label for="selectedName" class="input-label">Выберите контакт:</label>
+    <select wire:model="selectedName" id="selectedName" class="mt-3 leading-6 border-gray-300 input form-select">
       @foreach($contacts as $contact)
         <option>{{ $contact->name }}</option>
       @endforeach
     </select>
   </div>
   <div class="pt-6 mt-6 border-t-2 border-gray-300">
-    <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
+    <label for="name" class="input-label">Название</label>
     <div class="relative mt-3">
-      <input wire:model.lazy="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="name" id="name" class="input form-input @error('name') input-error placeholder-red-300 @enderror" />
       @error('name')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -20,13 +20,13 @@
       @enderror
     </div>
     @error('name')
-      <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+      <p class="validation-error">{{ $message }}</p>
     @enderror
   </div>
   <div class="mt-6">
-    <label for="link" class="block text-lg font-medium leading-5 text-gray-700">Ссылка</label>
+    <label for="link" class="input-label">Ссылка</label>
     <div class="relative mt-3">
-      <input wire:model.lazy="link" id="link" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('link') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="link" id="link" class="input form-input @error('link') input-error placeholder-red-300 @enderror" />
       @error('link')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -36,13 +36,13 @@
       @enderror
     </div>
     @error('link')
-      <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+      <p class="validation-error">{{ $message }}</p>
     @enderror
   </div>
   <div class="mt-6">
-    <label for="text" class="block text-lg font-medium leading-5 text-gray-700">Текст</label>
+    <label for="text" class="input-label">Текст</label>
     <div class="relative mt-3">
-      <input wire:model.lazy="text" id="text" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('text') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="text" id="text" class="input form-input @error('text') input-error placeholder-red-300 @enderror" />
       @error('text')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -52,7 +52,7 @@
       @enderror
     </div>
     @error('text')
-      <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+      <p class="validation-error">{{ $message }}</p>
     @enderror
   </div>
 
