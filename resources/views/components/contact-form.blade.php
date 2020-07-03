@@ -2,7 +2,7 @@
   @csrf
   <div class="relative w-full p-2">
     <label for="name" class="font-medium">Ваше имя:</label>
-    <input wire:model="name" id="name" class="w-full px-4 py-2 my-3 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-800 @error('name') border-red-400 text-red-900 placeholder-red-400 focus:border-red-700 @enderror" placeholder="Как к вам обращаться?" type="text" wfd-id="1064" />
+    <input wire:model.lazy="name" id="name" class="w-full px-4 py-2 my-3 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-800 @error('name') border-red-400 text-red-900 placeholder-red-400 focus:border-red-700 @enderror" placeholder="Как к вам обращаться?" type="text" wfd-id="1064" />
     @error('name')
       <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
         <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -14,7 +14,7 @@
   </div>
   <div class="relative w-full p-2">
     <label for="contact" class="font-medium">Ваш e-mail или телефон:</label>
-    <input wire:model="contact" id="contact" class="w-full px-4 py-2 my-3 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-800 @error('contact') border-red-400 text-red-900 placeholder-red-400 focus:border-red-700 @enderror" placeholder="Как с вами связаться?" type="text" wfd-id="1063" />
+    <input wire:model.lazy="contact" id="contact" class="w-full px-4 py-2 my-3 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-800 @error('contact') border-red-400 text-red-900 placeholder-red-400 focus:border-red-700 @enderror" placeholder="Как с вами связаться?" type="text" wfd-id="1063" />
     @error('contact')
       <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
         <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -26,7 +26,7 @@
   </div>
   <div class="relative w-full p-2">
     <label for="text" class="font-medium">Ваше сообщение:</label>
-    <textarea wire:model="text" id="text" class="block w-full h-48 px-4 py-2 my-3 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-800 @error('text') border-red-400 text-red-900 placeholder-red-400 focus:border-red-700 @enderror" placeholder="Что вы хотите сказать?"></textarea>
+    <textarea wire:model.lazy="text" id="text" class="block w-full h-48 px-4 py-2 my-3 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-800 @error('text') border-red-400 text-red-900 placeholder-red-400 focus:border-red-700 @enderror" placeholder="Что вы хотите сказать?"></textarea>
     @error('text')
       <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
         <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">

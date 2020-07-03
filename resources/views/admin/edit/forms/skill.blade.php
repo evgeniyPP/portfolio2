@@ -10,7 +10,7 @@
   <div class="pt-6 mt-6 border-t-2 border-gray-300">
     <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
     <div class="relative mt-3">
-      <input wire:model="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
       @error('name')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -26,7 +26,7 @@
   <div class="w-24 mt-6">
     <label for="rank" class="block text-lg font-medium leading-5 text-gray-700">Уровень</label>
     <div class="relative mt-3">
-      <input wire:model="rank" id="rank" type="number" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('rank') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="–" min="0" max="300" />
+      <input wire:model.lazy="rank" id="rank" type="number" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('rank') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" placeholder="–" min="0" max="300" />
       @error('rank')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -42,7 +42,7 @@
   <div class="mt-6">
     <label for="logo" class="block text-lg font-medium leading-5 text-gray-700">Font Awesome классы для лого</label>
     <div class="relative mt-3">
-      <input wire:model="logo" id="logo" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('logo') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="logo" id="logo" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('logo') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
       @error('logo')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -58,7 +58,7 @@
   </div>
   <div class="mt-6">
     <label for="type" class="block text-lg font-medium leading-5 text-gray-700">Тип</label>
-    <select wire:model="type" id="type" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none sm:text-lg sm:leading-5 focus:border-gray-500 @error('type') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror">
+    <select wire:model.lazy="type" id="type" class="block w-full p-2 mt-3 text-base leading-6 border-2 border-gray-300 rounded-md form-select focus:outline-none sm:text-lg sm:leading-5 focus:border-gray-500 @error('type') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror">
       <option value="main">Основной</option>
       <option value="side">Дополнительный</option>
     </select>

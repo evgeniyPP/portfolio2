@@ -10,7 +10,7 @@
   <div class="pt-6 mt-6 border-t-2 border-gray-300">
     <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
     <div class="relative mt-3">
-      <input wire:model="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none  focus:border-gray-500 @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="name" id="name" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none  focus:border-gray-500 @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
       @error('name')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -26,7 +26,7 @@
   <div class="mt-6">
     <label for="stack" class="block text-lg font-medium leading-5 text-gray-700">Стек</label>
     <div class="relative mt-3">
-      <input wire:model="stack" id="stack" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('stack') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="stack" id="stack" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('stack') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
       @error('stack')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -42,7 +42,7 @@
   <div class="mt-6">
     <label for="github_link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка на GitHub</label>
     <div class="relative mt-3">
-      <input wire:model="github_link" id="github_link" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('github_link') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="github_link" id="github_link" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('github_link') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
       @error('github_link')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -58,7 +58,7 @@
   <div class="mt-6">
     <label for="preview_link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка на сайт</label>
     <div class="relative mt-3">
-      <input wire:model="preview_link" id="preview_link" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('preview_link') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="preview_link" id="preview_link" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('preview_link') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
       @error('preview_link')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -74,7 +74,7 @@
   <div class="mt-6">
     <label for="link" class="block text-lg font-medium leading-5 text-gray-700">Cсылка на изображение</label>
     <div class="relative mt-3">
-      <input wire:model="image_url" id="image_url" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('image_url') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="image_url" id="image_url" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('image_url') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
       @error('image_url')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -90,7 +90,7 @@
   <div class="mt-6">
     <label for="description" class="block text-lg font-medium leading-5 text-gray-700">Описание</label>
     <div class="relative mt-3">
-      <textarea wire:model="description" id="description" class="block w-full h-20 p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('description') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror"></textarea>
+      <textarea wire:model.lazy="description" id="description" class="block w-full h-20 p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none focus:border-gray-500 @error('description') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror"></textarea>
       @error('description')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -106,7 +106,7 @@
   <div class="w-24 mt-6">
     <label for="order" class="block text-lg font-medium leading-5 text-gray-700">Место</label>
     <div class="relative mt-3">
-      <input wire:model="order" id="order" type="number" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('order') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" min="1" max="12" />
+      <input wire:model.lazy="order" id="order" type="number" class="block w-full p-2 border-2 rounded-md form-input sm:text-lg sm:leading-5 focus:outline-none @error('order') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" min="1" max="12" />
       @error('order')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">

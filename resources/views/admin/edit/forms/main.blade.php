@@ -10,7 +10,7 @@
   <div class="pt-6 mt-6 border-t-2 border-gray-300">
     <label for="name" class="block text-lg font-medium leading-5 text-gray-700">Название</label>
     <div class="relative mt-3">
-      <input wire:model="name" id="name" class="block w-full p-2 border-2 rounded-md form-input focus:border-gray-500 sm:text-lg sm:leading-5 focus:outline-none @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
+      <input wire:model.lazy="name" id="name" class="block w-full p-2 border-2 rounded-md form-input focus:border-gray-500 sm:text-lg sm:leading-5 focus:outline-none @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror" />
       @error('name')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -26,7 +26,7 @@
   <div class="mt-6">
     <label for="text" class="block text-lg font-medium leading-5 text-gray-700">Текст</label>
     <div class="relative mt-3">
-      <textarea wire:model="text" id="text" class="block w-full h-32 p-2 border-2 rounded-md form-input focus:border-gray-500 sm:text-lg sm:leading-5 focus:outline-none @error('text') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror"></textarea>
+      <textarea wire:model.lazy="text" id="text" class="block w-full h-32 p-2 border-2 rounded-md form-input focus:border-gray-500 sm:text-lg sm:leading-5 focus:outline-none @error('text') border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 @enderror"></textarea>
       @error('text')
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
