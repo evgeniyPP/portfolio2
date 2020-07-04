@@ -28,6 +28,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::view('/link', 'admin.edit.link')->name('admin.edit.link');
         Route::view('/skill', 'admin.edit.skill')->name('admin.edit.skill');
         Route::view('/contact', 'admin.edit.contact')->name('admin.edit.contact');
+        Route::view('/file', 'admin.edit.file')->name('admin.edit.file');
     });
 
     Route::group(['prefix' => 'add'], function () {
